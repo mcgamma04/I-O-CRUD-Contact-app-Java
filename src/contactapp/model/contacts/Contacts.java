@@ -78,8 +78,9 @@ public class Contacts implements IContactAppMethods{
         File file = new File("contactList.txt");
         try{
             String lines;
+            //read the files
             BufferedReader reader = new BufferedReader(new FileReader(file));
-
+           // continue to read file as long as the content is not null
             while((lines = reader.readLine())!=null){
                 holder = lines.split("!");
                 nameHolder.add(holder[0]);
