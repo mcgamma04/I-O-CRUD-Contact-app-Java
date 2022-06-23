@@ -202,10 +202,10 @@ public class Contacts implements IContactAppMethods{
             BufferedReader reader = new BufferedReader(new FileReader(file));
 
             System.out.println();
-
+             int count = 1;
             while((lines = reader.readLine())!=null){
                 holder = lines.split("!");
-
+                System.out.println(" >> S/n: " + count++);
                 System.out.println(" >> Name: " + holder[0]);
                 System.out.println(" >> Email: " + holder[1]);
                 System.out.println(" >> Phone number: " +("0"+holder[2]) );
